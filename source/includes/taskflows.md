@@ -115,7 +115,7 @@ When you want to start a new taskflow, you will want to know which tasks are ava
 
 When you request a specific taskflow in Kotive, it will return information about the taskflow. This will include the first task(s) that can be completed, as well as the fields pertaining to them.
 
-Before you can view information on a specific taskflow, you will need to [obtain the `<group_id>` of the group](#log-in) to which the taskflow belongs, as well as [the `<taskflow_id>` of the taskflow](#get-a-list-of-live-taskflows).
+Before you can view information on a specific taskflow, you will need to [obtain the `<group_id>` of the group](#login) to which the taskflow belongs, as well as [the `<taskflow_id>` of the taskflow](#get-a-list-of-live-taskflows).
 
 Send a `GET` request to `/group/<group_id>/process/<taskflow_id>/blank`. The response will contain the following attributes:
 
