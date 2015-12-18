@@ -46,7 +46,7 @@ curl https://webapp.kotive.com/api/people      \
 	-X POST                                    \
 	-H "Content-Type: application/json"        \
 	-H 'Authorization: Basic <login details>'  \
-	-d '{"person"{"email": "<email>", "username": "<username>", "firstname": "<firstname>", "lastname": "<lastname>", "mobile": "<mobile>", "password": "<password>", "groupId" :<groupId>}}'
+	-d '{"person": {"email": "<email>", "username": "<username>", "firstname": "<firstname>", "lastname": "<lastname>", "mobile": "<mobile>", "password": "<password>", "groupId": <groupId>}}'
 ```
 
 > Example Response
