@@ -9,6 +9,12 @@ curl https://webapp.kotive.com/api/group/<group_id>/people  \
 	-H 'Authorization: Basic <login details>'
 ```
 
+```javascript
+client.people.list(<group_id>, function (d) {
+  // d is the response from the server
+});
+```
+
 > Example Response
 
 ```json
@@ -47,6 +53,12 @@ curl https://webapp.kotive.com/api/people      \
 	-H "Content-Type: application/json"        \
 	-H 'Authorization: Basic <login details>'  \
 	-d '{"person": {"email": "<email>", "username": "<username>", "firstname": "<firstname>", "lastname": "<lastname>", "mobile": "<mobile>", "password": "<password>", "groupId": <groupId>}}'
+```
+
+```javascript
+client.people.create({email: '<email>', username: '<username>', firstname: '<firstname>', lastname: '<lastname>', mobile: '<mobile>', password: '<password>', groupId: <groupId>}}, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response
