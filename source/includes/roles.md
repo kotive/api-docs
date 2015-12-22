@@ -21,6 +21,12 @@ curl https://webapp.kotive.com/api/group/<group_id>/personRoles?personId=<person
 	-H 'Authorization: Basic <login details>'
 ```
 
+```javascript
+client.roles.get(<group_id>, <person_id>, function (d) {
+  // d is the response from the server
+});
+```
+
 > Example Response
 
 ```json
@@ -55,6 +61,12 @@ curl https://webapp.kotive.com/api/personRoles  \
 	-H 'Authorization: Basic <login details>'   \
 	-H "Content-Type: application/json"         \
 	-d '{"personRole":{"userId": <user_id>, "roleId": <role_id>, "groupId": <group_id>}}'
+```
+
+```javascript
+client.roles.assign({personRole: {userId: <user_id>, roleId: <role_id>, groupId: <group_id>}}, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response
@@ -95,6 +107,12 @@ curl https://webapp.kotive.com/api/personRoles/<id>  \
 	-X DELETE                                        \
 	-H 'Authorization: Basic <login details>'
 	
+```
+
+```javascript
+client.roles.revoke(<id>, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response

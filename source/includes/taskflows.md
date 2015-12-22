@@ -11,6 +11,12 @@ curl https://webapp.kotive.com/api/group/<group_id>/taskflowReports  \
 	-H 'Authorization: Basic <login details>'
 ```
 
+```javascript
+client.taskflow.list(<group_id>, function (d) {
+  // d is the response from the server
+});
+```
+
 > Example Response
 
 ```json
@@ -45,6 +51,12 @@ This call can be used to get a list of taskflows in an App or in an Organization
 ```shell
 curl https://webapp.kotive.com/api/group/<group_id>/process/<taskflow_id>/blank  \
 	-H 'Authorization: Basic <login details>'
+```
+
+```javascript
+client.taskflow.getTemplate(<group_id>, <taskflow_id>, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response
@@ -166,6 +178,12 @@ curl https://webapp.kotive.com/api/group/<group_id>/process  \
 	-d '{"id_process":<id_process>,"id_t":<id_t>,"id_owning_process":<id_owning_process>,"fields":[]}'
 ```
 
+```javascript
+client.taskflow.startInstance(<group_id>, {id_process: <id_process>, id_t: <id_t>, id_owning_process: <id_owning_process>, fields: []}, function (d) {
+  // d is the response from the server
+});
+```
+
 > Example Response
 
 ```json
@@ -269,6 +287,12 @@ curl https://webapp.kotive.com/api/group/<group_id>/process/<process_id>/activit
 	-d'{"id_process":<id_process>,"id_t":<id_t>,"id_owning_process":<id_owning_process>,"fields":[{"id":<id>,"value":<value>},{"id":<id>,"value":<value>}]}'
 ```
 
+```javascript
+client.taskflow.submit(<group_id>, <process_id>, {id_process: <id_process>, id_t: <id_t>, id_owning_process: <id_owning_process>, fields: [{id:<id>, value: <value>}, {id: <id>, value: <value>}]}, function (d) {
+  // d is the response from the server
+});
+```
+
 > Example Response
 
 ```json
@@ -325,6 +349,12 @@ The response obtained from this request may be:
 ```shell
 curl https://webapp.kotive.com/api/group/<group_id>/process/<process_id>/next  \
 	-H 'Authorization: Basic <login details>'
+```
+
+```javascript
+client.taskflow.next(<group_id>, <process_id>, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response

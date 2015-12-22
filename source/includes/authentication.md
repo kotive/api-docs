@@ -2,10 +2,18 @@
 
 ## Login
 
+```javascript
+var Kotive = require('kotive-client');
+```
+
 > To authorise:
 
 ```shell
 curl -u username:password https://webapp.kotive.com/api/login
+```
+
+```javascript
+var client = Kotive.Client('username', 'password');
 ```
 
 > Or alternatively
@@ -13,6 +21,10 @@ curl -u username:password https://webapp.kotive.com/api/login
 ```shell
 curl https://webapp.kotive.com/api/login       \
 	-H 'Authorization: Basic <login details>'
+```
+
+```javascript
+var client = Kotive.Client('username', 'authToken');
 ```
 
 * Endpoint: `GET /login`
@@ -127,6 +139,12 @@ curl https://webapp.kotive.com/api/user/resetpassword  \
 	-X POST                                            \
 	-H "Content-Type: application/json"                \
 	-d '{"email": "example@example.com"}' 
+```
+
+```javascript
+client.auth.passwordReset({email: "example@example.com"}, function (d) {
+  // d is the response from the server
+});
 ```
 
 > Example Response
