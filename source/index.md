@@ -6,7 +6,6 @@ toc_footers:
 
 language_tabs:
   - shell: cURL
-  <!-- - javascript: Node -->
 
 includes:
   - authentication
