@@ -3,7 +3,7 @@
 ## Login
 
 ```javascript
-var Kotive = require('kotive-client');
+var Kotive = require('kotive');
 ```
 
 > To authorise:
